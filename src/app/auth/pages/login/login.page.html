@@ -1,0 +1,43 @@
+<ion-content class="ion-padding">
+  <h1 text-center>
+    <img src="/assets/logo.png" alt="" srcset="">
+  </h1>
+
+  <form [formGroup]="authForm" (submit)="onSubmit(authProvider.Email)">
+    <ion-item>
+      <ion-icon name="mail" color="dark" slot="start"></ion-icon>
+      <ion-input
+        type="email"
+        placeholder="Email"
+        formControlName="email"
+        inputmode="email"
+        autofocus="true"
+      ></ion-input>
+      <ion-note slot="end" color="dark" *ngIf="email.dirty && email.hasError('required')">
+        Required
+      </ion-note>
+      <ion-note slot="end" color="dark" *ngIf="email.dirty && email.hasError('email')">
+        Email inválido
+      </ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="lock-closed" color="dark" slot="start"></ion-icon>
+      <ion-input type="password" placeholder="Senha" formControlName="password"></ion-input>
+      <ion-note slot="end" color="dark" *ngIf="password.dirty && password.hasError('required')"> </ion-note>
+      <ion-note slot="end" color="dark" *ngIf="password.dirty && password.hasError('minlength')">
+        Min 6 caracteres
+      </ion-note>
+    </ion-item>
+    <ion-button expand="block" [disabled]="authForm.invalid" color="dark" type="submit" [routerLink]="['/servicoalt']">
+      {{configs.action}}
+    </ion-button>
+  </form>
+  <ion-button expand="block" fill="clear" color="dark" (click)="changeAuthAction()">
+    {{ configs.actionChange}}
+  </ion-button>
+  <ion-button on expand="block" [routerLink]="['/dados']" color="dark" (click)="onSubmit(authProvider.Facebook)">
+    <ion-icon name="logo-facebook" slot="start">
+      Login with Facebook
+    </ion-icon>
+  </ion-button>
+</ion-content>

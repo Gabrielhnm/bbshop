@@ -1,0 +1,53 @@
+<ion-content padding>
+  <ion-header translucent="true">
+    <ion-toolbar translucent="true">
+      <ion-title>Horários</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-radio-group value="grape">
+          <ion-item>
+            <ion-badge color="warning"> 11:00 </ion-badge>
+            <ion-radio slot="start" color="success" value="onze"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-badge color="warning"> 12:00 </ion-badge>
+            <ion-radio slot="start" color="tertiary" value="doze"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-badge color="warning"> 13:00 </ion-badge>
+            <ion-radio slot="start" color="danger" value="treze"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-badge color="warning"> 14:00 </ion-badge>
+            <ion-radio slot="start" color="danger" value="14"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-badge color="warning"> 15:00 </ion-badge>
+            <ion-radio slot="start" color="danger" value="15"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-badge color="warning"> 16:00 </ion-badge>
+            <ion-radio slot="start" color="danger" value="16"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-badge color="warning"> 17:00 </ion-badge>
+            <ion-radio slot="start" color="danger" value="17"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-badge color="warning"> 18:00 </ion-badge>
+            <ion-radio slot="start" color="danger" value="18"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+
+      <ion-button expand="block" color="warning" [routerLink]="['/pagamento']" fill="outline">Prosseguir</ion-button>
+      <ion-button expand="block" color="danger" [routerLink]="['/servicos']" fill="outline">Voltar</ion-button>
+              </ion-content>

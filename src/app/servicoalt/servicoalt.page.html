@@ -1,0 +1,51 @@
+<ion-content padding>
+  <ion-header translucent="true">
+    <ion-toolbar translucent="true">
+      <ion-title>Serviços</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item>
+    <ion-label>Cortes</ion-label>
+    <ion-select value="Dinheiro" [(ngModel)]="servico.corte" multiple="true" >
+      <ion-select-option value="maquina" >Corte R$ 10,00</ion-select-option>
+      <ion-select-option value="tesoura">Tesoura R$ 15,00</ion-select-option>
+      <ion-select-option value="Barba" >Barba  R$ 10,00</ion-select-option>
+      <ion-select-option value="Corte com reflexo" >Corte c/ reflexo R$ 15,00</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Forma de Pagamento</ion-label>
+    <ion-select value="Dinheiro" [(ngModel)]="servico.formapgt" >
+      <ion-select-option value="Credito" >C/ Crédito</ion-select-option>
+      <ion-select-option value="Debito">C/ Débito</ion-select-option>
+      <ion-select-option value="Dinheiro" >Dinheiro</ion-select-option>
+      <ion-select-option value="Picpay" >Picpay</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Horários</ion-label>
+    <ion-select  value="onze" [(ngModel)]="servico.horario">
+      <ion-select-option value="11:00" >11:00</ion-select-option>
+      <ion-select-option value="12:00" >12:00</ion-select-option>
+      <ion-select-option value="13:00" >13:00</ion-select-option>
+      <ion-select-option value="14:00" >14:00</ion-select-option>
+      <ion-select-option value="15:00">15:00</ion-select-option>
+      <ion-select-option value="16:00" >16:00</ion-select-option>
+      <ion-select-option value="17:00" >17:00</ion-select-option>
+      <ion-select-option value="18:00" >18:00</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Descrição</ion-label>
+    <ion-textarea class="texto" placeholder="Informe o nome e observações." [(ngModel)]="servico.texto"></ion-textarea>
+  </ion-item>
+
+</ion-content>
+<ion-footer>
+<ion-button expand="block" color="warning" fill="outline" (click)='criarPost(servico)'  >Confirmar</ion-button>
+<ion-button expand="block"  color="danger" fill="outline" [routerLink]="['/agendamento']" >Voltar</ion-button>
+</ion-footer>

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Dados</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-item>
+    <ion-label  position="floating" color="warning">Nome Completo</ion-label>
+    <ion-input type="text" [(ngModel)]="dados.nomecompleto" required ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating" color="warning">CPF</ion-label>
+    <ion-input type="text" [(ngModel)]="dados.cpf"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating" color="warning">Idade</ion-label>
+    <ion-input type="text" [(ngModel)]="dados.idade"></ion-input>
+  </ion-item>
+</ion-content>
+<ion-footer>
+  <ion-button expand="block" color="warning" fill="outline" (click)='criarPost(dados)'>Salvar</ion-button>
+      <ion-button expand="block" color="danger" [routerLink]="['/login']" fill="outline">Sair</ion-button>
+</ion-footer>

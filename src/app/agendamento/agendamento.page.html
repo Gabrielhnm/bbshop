@@ -1,0 +1,28 @@
+
+<ion-content [fullscreen]="true" padding class="background">
+
+  <ion-header translucent="true">
+    <ion-toolbar translucent="true">
+      <ion-title>Bem-vindo
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+ <img src="/assets/3.jpg" [routerLink]="['/servicoalt']" class="foto" alt="" srcset="" height="450px">
+ <img src="/assets/2.jpg"  class="foto" alt="" srcset="" >
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom" class="tab">
+    <ion-tab-button tab="schedule">
+      <ion-icon [routerLink]="['/servicoalt']"  name="cut-outline"></ion-icon>
+        <ion-label>Serviços</ion-label>
+    </ion-tab-button>
+
+
+    <ion-tab-button tab="about">
+      <ion-icon [routerLink]="['/login']" color="danger" name="close-outline"></ion-icon>
+      <ion-label>Sair</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+</ion-content>

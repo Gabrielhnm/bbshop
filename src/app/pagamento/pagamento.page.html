@@ -1,0 +1,32 @@
+<ion-content padding>
+  <ion-header translucent="true">
+    <ion-toolbar translucent="true">
+      <ion-title>Pagamento</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-radio-group value="grape">
+    <ion-item>
+      <ion-badge color="warning"> Cartão de Crédito </ion-badge>
+      <ion-radio slot="start" color="warning" value="onze"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-badge color="warning"> Cartão de Débito </ion-badge>
+      <ion-radio slot="start" color="warning" value="doze"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-badge color="warning"> Dinheiro  </ion-badge>
+      <ion-radio slot="start" color="warning" value="treze"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-badge color="warning"> Picpay </ion-badge>
+      <ion-radio slot="start" color="warning" value="14"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+</ion-content>
+<ion-footer>
+<ion-button expand="block" color="warning" (click)="confirmaLoading()" [routerLink]="['/agendamento']" fill="outline">Prosseguir</ion-button>
+<ion-button expand="block" color="danger" [routerLink]="['/horarios']" fill="outline">Voltar</ion-button>
+</ion-footer>
